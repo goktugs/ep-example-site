@@ -88,7 +88,7 @@ const NAV_ELEMENTS_BOTTOM = [
   },
   {
     id: 11,
-    name: "V-Papel",
+    name: "",
   },
   {
     id: 12,
@@ -104,7 +104,7 @@ const NAV_ELEMENTS_BOTTOM = [
   },
   {
     id: 15,
-    name: "Netflix",
+    name: "",
   },
   {
     id: 16,
