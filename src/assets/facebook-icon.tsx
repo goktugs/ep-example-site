@@ -1,0 +1,10 @@
+import { SVGAttributes } from 'react'
+
+export const FacebookIcon = (props: SVGAttributes<SVGElement>) => {
+    return (
+        <svg {...props} width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.665 2.65667H12.1257V0.112667C11.8737 0.078 11.007 0 9.99767 0C7.89167 0 6.449 1.32467 6.449 3.75933V6H4.125V8.844H6.449V16H9.29833V8.84467H11.5283L11.8823 6.00067H9.29767V4.04133C9.29833 3.21933 9.51967 2.65667 10.665 2.65667Z" fill="white" />
+        </svg>
+
+    )
+}
