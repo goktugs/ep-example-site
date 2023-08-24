@@ -1,4 +1,3 @@
-import React from "react";
 import { ShoppingCartIcon } from "../assets/shoppingCart-icon";
 
 export default function AdCard() {

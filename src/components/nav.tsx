@@ -1,65 +1,170 @@
-import React from "react";
+import { useState } from "react";
+const NAV_ELEMENTS_TOP = [
+  {
+    id: 1,
+    name: "Tüm Kategoriler",
+  },
+  {
+    id: 2,
+    name: "Hediye Sistemi",
+  },
+  {
+    id: 3,
+    name: "Pubg Mobile",
+  },
+  {
+    id: 4,
+    name: "PVP Serverlar",
+  },
+  {
+    id: 5,
+    name: "Yayıncılar",
+  },
+  {
+    id: 6,
+    name: "Steam Oyunları",
+  },
+  {
+    id: 7,
+    name: "Oyuncu Pazarı",
+  },
+  {
+    id: 8,
+    name: "Ödeme Yöntemleri",
+  },
+  {
+    id: 9,
+    name: "Banka Hesapları",
+  },
+];
+
+const NAV_ELEMENTS_BOTTOM = [
+  {
+    id: 1,
+    name: "Exxen",
+  },
+  {
+    id: 2,
+    name: "Albion",
+  },
+  {
+    id: 3,
+    name: "Rise Online",
+  },
+  {
+    id: 4,
+    name: "PUBG Mobile",
+    discount: 50,
+  },
+  {
+    id: 5,
+    name: "Free Fire",
+  },
+  {
+    id: 6,
+    name: "League of Legends",
+  },
+  {
+    id: 7,
+    name: "Valorant",
+  },
+  {
+    id: 8,
+    name: "Knight Online",
+    discount: 15,
+  },
+  {
+    id: 9,
+    name: "Metin 2",
+  },
+  {
+    id: 10,
+    name: "Zula",
+  },
+  {
+    id: 11,
+    name: "V-Papel",
+  },
+  {
+    id: 12,
+    name: "GOLDBAR",
+  },
+  {
+    id: 13,
+    name: "Steam",
+  },
+  {
+    id: 14,
+    name: "Xbox",
+  },
+  {
+    id: 15,
+    name: "Netflix",
+  },
+  {
+    id: 16,
+    name: "Spotify",
+  },
+];
 
 export default function Nav() {
+  const [selectedID, setSelectedID] = useState(1);
+
+  const handleClick = (id: number) => {
+    setSelectedID(id);
+  };
+
+  const getSelectedClass = (id: number) =>
+    selectedID === id
+      ? "bg-main-purple-dark text-white "
+      : "text-main-text-smoke";
+
   return (
-    <div>
-      <ul className="my-4 flex justify-center space-x-12 whitespace-nowrap py-2 text-main-text-smoke ">
-        <li>
-          <a href="#">Tüm Kategoriler</a>
-        </li>
-        <li>
-          <a href="#">Hediye Sistemi</a>
-        </li>
-        <li>
-          <a href="#">Pubg Mobile</a>
-        </li>
-        <li>
-          <a href="#">PVP Serverlar</a>
-        </li>
-        <li>
-          <a href="#">Yayıncılar</a>
-        </li>
-        <li>
-          <a href="#">Steam Oyunları</a>
-        </li>
-        <li>
-          <a href="#">Oyuncu Pazarı</a>
-        </li>
-        <li>
-          <a href="#">Ödeme Yöntemleri</a>
-        </li>
-        <li>
-          <a href="#">Banka Hesapları</a>
-        </li>
-      </ul>
-      <ul className="flex space-x-10">
-        <li className="flex flex-col items-center space-y-1 text-white">
-          <a
-            className="block transform rounded-full bg-main-text-smoke p-1 transition hover:-rotate-6"
-            href="#"
+    <div className="mb-5">
+      <ul className="my-4 flex justify-center space-x-8 py-2 text-main-text-smoke ">
+        {NAV_ELEMENTS_TOP.map((element) => (
+          <li
+            key={element.id}
+            onClick={() => handleClick(element.id)}
+            className={`flex-1 cursor-pointer whitespace-nowrap rounded-full p-4 text-center text-sm font-semibold ${getSelectedClass(
+              element.id,
+            )}`}
           >
-            <img
-              className="h-20 w-20 rounded-full"
-              src="http://placekitten.com/g/200/200"
-              alt=""
-            />
-          </a>
-          <a href="">Exxen</a>
-        </li>
-        <li className="flex flex-col items-center space-y-1 text-white">
-          <a
-            className="block transform rounded-full bg-main-text-smoke p-1 transition hover:-rotate-6"
-            href="#"
-          >
-            <img
-              className="h-20 w-20 rounded-full"
-              src="http://placekitten.com/g/200/201"
-              alt=""
-            />
-          </a>
-          <a href="">Exxen</a>
-        </li>
+            {element.name}
+          </li>
+        ))}
       </ul>
+
+      <div className="flex space-x-12 overflow-x-hidden pb-2 hover:overflow-x-scroll">
+        {NAV_ELEMENTS_BOTTOM.map((element) => (
+          <div
+            key={element.id}
+            className="relative flex flex-col items-center space-y-1 text-white "
+          >
+            <a
+              className="block transform rounded-full bg-main-text-smoke p-1 transition hover:-rotate-12"
+              href="#"
+            >
+              <img
+                className="h-20 w-20 rounded-full  "
+                src="http://placekitten.com/g/200/200"
+                alt=""
+              />
+            </a>
+            <a
+              className="w-28 overflow-hidden text-ellipsis whitespace-nowrap text-center text-xs"
+              href=""
+            >
+              {element.name}
+            </a>
+            {element.discount && (
+              <div className="absolute top-0 h-10 w-20 rounded-tl-full  rounded-tr-full bg-gradient-to-b from-pink-600 text-center ">
+                <span className="text-xs text-white">{element.discount}%</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
