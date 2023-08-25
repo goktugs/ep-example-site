@@ -1,5 +1,3 @@
-import React from "react";
-
 export const MostSaleIcon = (props: { selected: boolean }) => {
   return (
     <svg

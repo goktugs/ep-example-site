@@ -1,5 +1,5 @@
 import { Menu, Transition } from "@headlessui/react";
-import React, { Fragment, useState } from "react";
+import { Fragment, useState } from "react";
 import { CategoryIcon } from "../../assets/nav/category-icon";
 import { SearchIcon } from "../../assets/search-icon";
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AdCard from "./_adCard";
 
 export default function PaginationAd() {

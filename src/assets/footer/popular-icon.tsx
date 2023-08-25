@@ -1,5 +1,3 @@
-import React from "react";
-
 export const PopularIcon = (props: { selected: boolean }) => {
   return (
     <svg

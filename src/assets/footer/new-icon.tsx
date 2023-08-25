@@ -1,5 +1,3 @@
-import React from "react";
-
 export const NewIcon = (props: { selected: boolean }) => {
   console.log(props);
   return (
