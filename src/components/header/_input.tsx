@@ -29,7 +29,7 @@ export default function Input() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex max-h-16 divide-x divide-slate-600 rounded-full bg-main-purple-dark px-5 py-5 shadow-main-input  ">
+    <div className="flex h-full max-h-16 divide-x divide-slate-600 rounded-full bg-main-purple-dark px-5 py-5 shadow-main-input  ">
       <div className="flex items-center justify-center font-bold text-white">
         <div className="h-5 w-5">
           <CategoryIcon />
@@ -77,13 +77,13 @@ export default function Input() {
       </div>
       <div className="flex px-5">
         <input
-          className="w-56 bg-transparent text-sm font-semibold text-white placeholder:text-main-text-smoke"
+          className=" w-32 bg-transparent text-sm font-semibold text-white placeholder:text-main-text-smoke md:w-56"
           type="text"
           placeholder={t("Kategori Veya Ürün Arayın")}
           name=""
           id=""
         />
-        <div className=" right-0 h-6 w-6">
+        <div className="  right-0 hidden h-6 w-6 md:block ">
           <SearchIcon />
         </div>
       </div>

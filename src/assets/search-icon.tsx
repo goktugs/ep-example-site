@@ -15,16 +15,16 @@ export const SearchIcon = (props: React.SVGAttributes<SVGElement>) => {
         cy="11"
         r="8"
         stroke="#8F8FA7"
-        stroke-width="1.375"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.375"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M16.5 16.9579L21.5 21.9579"
         stroke="#8F8FA7"
-        stroke-width="1.375"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.375"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

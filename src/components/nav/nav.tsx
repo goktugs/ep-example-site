@@ -126,7 +126,7 @@ export default function Nav() {
 
   return (
     <div className="mb-5">
-      <ul className="my-4 flex justify-center space-x-8 py-2 text-main-text-smoke ">
+      <ul className="my-4 flex justify-center space-x-8 overflow-x-scroll py-2 text-main-text-smoke ">
         {NAV_ELEMENTS_TOP.map((element) => (
           <li
             key={element.id}

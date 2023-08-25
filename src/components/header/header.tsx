@@ -62,15 +62,15 @@ export default function Header() {
             className="flex h-8 w-8 items-center justify-center rounded-full border border-[#453F62]"
           >
             <div className="h-5 w-5">
-              {i18n.language === "tr" ? <TrFlagIcon /> : <UsFlagIcon />}
+              {i18n.language === "tr" ? <UsFlagIcon /> : <TrFlagIcon />}
             </div>
           </button>
         </div>
       </div>
-      <div className="flex w-full flex-1 justify-center  ">
+      <div className="flex w-full flex-1 flex-col justify-center space-y-2 md:flex-row md:space-y-0  ">
         <div className="flex-1"></div>
         <Input />
-        <div className="flex flex-1 justify-end gap-4">
+        <div className=" flex flex-1 justify-center gap-4 pt-8 md:justify-end md:pt-0 ">
           <div className="flex items-center gap-4 rounded-full border border-main-purple-light px-4 py-2">
             <div className="flex items-center rounded-full border border-main-purple">
               <div className="flex flex-1 flex-col text-right">

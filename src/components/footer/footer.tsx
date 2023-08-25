@@ -39,7 +39,7 @@ export default function Footer() {
 
   return (
     <footer className=" mb-8 flex flex-col">
-      <div className="my-9 flex justify-between">
+      <div className="my-9 flex flex-col justify-between gap-8 md:flex-row ">
         <div className="flex items-center gap-4">
           <div className="p-2">
             <AdIcon />
@@ -53,7 +53,7 @@ export default function Footer() {
             </span>
           </div>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex items-center justify-center space-x-4">
           {FOOTER_BUTTONS.map((button) => (
             <button
               key={button.id}

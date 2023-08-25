@@ -47,16 +47,16 @@ export default function Main() {
   };
 
   return (
-    <div className="flex gap-7">
+    <div className=" flex flex-col md:flex-row md:gap-7">
       <div className="flex flex-1 flex-col gap-5">
         <div className="flex-1">
           <img
-            className="w-full rounded-2xl"
+            className="h-auto max-w-full rounded-2xl"
             src={selectedImage.logo ? selectedImage.logo : selectedImage.src}
             alt=""
           />
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between overflow-x-scroll">
           {MAIN_IMAGES.map((image) => (
             <div
               onClick={() => handleImageClick(image.src)}

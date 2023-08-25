@@ -34,7 +34,7 @@ export default function PaginationAd() {
 
   return (
     <>
-      <div className="grid grid-cols-4 grid-rows-2 gap-x-8 gap-y-5 ">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 ">
         {adCards}
       </div>
       <div className="mt-4 flex w-full items-center justify-center gap-6  ">
