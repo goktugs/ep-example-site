@@ -4,11 +4,7 @@ export default function AdCard() {
   return (
     <div className="flex flex-col space-y-8 rounded-2xl bg-main-purple-dark p-4">
       <div className="relative">
-        <img
-          className="h-full w-full rounded-2xl"
-          src="https://placekitten.com/g/200/180"
-          alt=""
-        />
+        <img className="h-full w-full rounded-2xl" src="/adbanner.png" alt="" />
         <div className="absolute top-0 flex h-20 w-20 items-center justify-center  rounded-tl-2xl bg-gradient-to-br from-pink-600  text-2xl font-bold text-white ">
           %5
         </div>
