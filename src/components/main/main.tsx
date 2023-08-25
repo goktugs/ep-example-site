@@ -4,7 +4,8 @@ import { useState } from "react";
 const MAIN_IMAGES = [
   {
     id: 1,
-    src: "http://placekitten.com/g/1042/400",
+    src: "/riseonlinelogo.png",
+    logo: "/background-main.png",
   },
   {
     id: 2,
@@ -50,13 +51,17 @@ export default function Main() {
     <div className="flex gap-7">
       <div className="flex flex-1 flex-col gap-5">
         <div className="flex-1">
-          <img className="rounded-2xl" src={selectedImage.src} alt="" />
+          <img
+            className="w-full rounded-2xl"
+            src={selectedImage.logo ? selectedImage.logo : selectedImage.src}
+            alt=""
+          />
         </div>
         <div className="flex items-center justify-between">
           {MAIN_IMAGES.map((image) => (
             <div
               onClick={() => handleImageClick(image.src)}
-              className={`cursor-pointer rounded-2xl bg-main-purple-dark px-2 py-4  ${
+              className={`cursor-pointer rounded-2xl bg-main-purple-dark px-4 py-2  ${
                 selectedImage.id === image.id
                   ? "border-4 border-main-text-smoke opacity-100"
                   : "opacity-25"
@@ -77,12 +82,12 @@ export default function Main() {
       </div>
       <div className="flex flex-col gap-8">
         <img
-          className="rounded-2xl"
+          className="flex-1 rounded-2xl"
           src="http://placekitten.com/g/326/234"
           alt=""
         />
         <img
-          className="rounded-2xl"
+          className="flex-1 rounded-2xl"
           src="http://placekitten.com/g/326/234"
           alt=""
         />
