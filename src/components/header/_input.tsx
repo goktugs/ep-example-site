@@ -2,6 +2,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { CategoryIcon } from "../../assets/nav/category-icon";
 import { SearchIcon } from "../../assets/search-icon";
+import { useTranslation } from "react-i18next";
 
 const people = [
   { id: 1, name: "Exxen", unavailable: false },
@@ -24,6 +25,8 @@ const people = [
 
 export default function Input() {
   const [selectedPerson, setSelectedPerson] = useState(people[0]);
+
+  const { t } = useTranslation();
 
   return (
     <div className="flex max-h-16 divide-x divide-slate-600 rounded-full bg-main-purple-dark px-5 py-5 shadow-main-input  ">
@@ -76,7 +79,7 @@ export default function Input() {
         <input
           className="w-56 bg-transparent text-sm font-semibold text-white placeholder:text-main-text-smoke"
           type="text"
-          placeholder="Kategori veya ürün arayın"
+          placeholder={t("Kategori Veya Ürün Arayın")}
           name=""
           id=""
         />

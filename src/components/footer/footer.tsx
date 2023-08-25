@@ -5,6 +5,7 @@ import { PopularIcon } from "../../assets/footer/popular-icon";
 import { MostSaleIcon } from "../../assets/footer/mostSale-icon";
 import React from "react";
 import PaginationAd from "./_pagination";
+import { useTranslation } from "react-i18next";
 
 const FOOTER_BUTTONS = [
   {
@@ -34,6 +35,8 @@ export default function Footer() {
     setSelectedButton(button);
   };
 
+  const { t } = useTranslation();
+
   return (
     <footer className=" mb-8 flex flex-col">
       <div className="my-9 flex justify-between">
@@ -42,7 +45,9 @@ export default function Footer() {
             <AdIcon />
           </div>
           <div className="flex flex-col">
-            <span className="text-sm text-main-text-smoke">1200 İlan</span>
+            <span className="text-sm text-main-text-smoke">
+              1200 {t("İlan")}{" "}
+            </span>
             <span className="flex-1 text-3xl font-extrabold text-white ">
               Rise Online World
             </span>
@@ -69,7 +74,7 @@ export default function Footer() {
                     : "text-main-text-smoke"
                 }`}
               >
-                {button.text}
+                {t(`${button.text}`)}
               </span>
             </button>
           ))}

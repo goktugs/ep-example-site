@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CategoryIcon } from "../../assets/nav/category-icon";
+import { useTranslation } from "react-i18next";
 const NAV_ELEMENTS_TOP = [
   {
     id: 1,
@@ -116,6 +117,8 @@ export default function Nav() {
     setSelectedID(id);
   };
 
+  const { t } = useTranslation();
+
   const getSelectedClass = (id: number) =>
     selectedID === id
       ? "bg-main-purple-dark text-white "
@@ -137,7 +140,7 @@ export default function Nav() {
                 {element.logo}
               </div>
             )}
-            {element.name}
+            {t(element.name)}
           </li>
         ))}
       </ul>
