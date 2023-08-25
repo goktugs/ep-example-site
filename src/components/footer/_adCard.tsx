@@ -5,9 +5,7 @@ export default function AdCard() {
     <div className="flex flex-col space-y-8 rounded-2xl bg-main-purple-dark p-4">
       <div className="relative">
         <img className="h-full w-full rounded-2xl" src="/adbanner.png" alt="" />
-        <div className="absolute top-0 flex h-20 w-20 items-center justify-center  rounded-tl-2xl bg-gradient-to-br from-pink-600  text-2xl font-bold text-white ">
-          %5
-        </div>
+
         <div className="absolute -bottom-3 flex w-full items-center justify-between px-4">
           <span className="rounded-3xl bg-main-purple-light px-6 py-2 text-xs font-bold text-white ">
             1.000,00 TL
