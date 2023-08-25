@@ -135,7 +135,7 @@ export default function Nav() {
         ))}
       </ul>
 
-      <div className="flex space-x-12 overflow-x-hidden pb-2 hover:overflow-x-scroll">
+      <div className="flex space-x-12 overflow-x-scroll pb-2 ">
         {NAV_ELEMENTS_BOTTOM.map((element) => (
           <div
             key={element.id}
