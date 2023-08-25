@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { CategoryIcon } from "../../assets/nav/category-icon";
 const NAV_ELEMENTS_TOP = [
   {
     id: 1,
     name: "Tüm Kategoriler",
+    logo: <CategoryIcon />,
   },
   {
     id: 2,
@@ -126,10 +128,15 @@ export default function Nav() {
           <li
             key={element.id}
             onClick={() => handleClick(element.id)}
-            className={`flex-1 cursor-pointer whitespace-nowrap rounded-full p-4 text-center text-sm font-semibold ${getSelectedClass(
+            className={`flex flex-1 cursor-pointer whitespace-nowrap rounded-full p-4 text-center text-sm font-semibold ${getSelectedClass(
               element.id,
             )}`}
           >
+            {element.logo && (
+              <div className="mr-2 flex h-6 w-6 items-center justify-center">
+                {element.logo}
+              </div>
+            )}
             {element.name}
           </li>
         ))}
@@ -147,7 +154,7 @@ export default function Nav() {
             >
               <img
                 className="h-20 w-20 rounded-full  "
-                src="http://placekitten.com/g/200/200"
+                src={`http://placekitten.com/g/200/${200 + element.id}`}
                 alt=""
               />
             </a>

@@ -4,7 +4,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
-    <div className="flex h-screen w-full flex-col bg-main-purple">
+    <div className="flex h-full w-full flex-col bg-main-purple">
       <App />
     </div>
   </>,

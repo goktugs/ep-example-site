@@ -1,15 +1,15 @@
-import AdCard from "./components/adCard";
-import Header from "./components/header";
-import Main from "./components/main";
-import Nav from "./components/nav";
+import Footer from "./components/footer/footer";
+import Header from "./components/header/header";
+import Main from "./components/main/main";
+import Nav from "./components/nav/nav";
 
 function App() {
   return (
-    <div className="font-inter container mx-auto">
+    <div className="container mx-auto font-inter">
       <Header />
       <Nav />
       <Main />
-      {/* <AdCard /> */}
+      <Footer />
     </div>
   );
 }
