@@ -92,7 +92,7 @@ const NAV_ELEMENTS_BOTTOM = [
   },
   {
     id: 12,
-    name: "GOLDBAR",
+    name: "",
   },
   {
     id: 13,
