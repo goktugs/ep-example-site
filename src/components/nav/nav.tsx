@@ -96,11 +96,11 @@ const NAV_ELEMENTS_BOTTOM = [
   },
   {
     id: 13,
-    name: "Steam",
+    name: "",
   },
   {
     id: 14,
-    name: "Xbox",
+    name: "",
   },
   {
     id: 15,
