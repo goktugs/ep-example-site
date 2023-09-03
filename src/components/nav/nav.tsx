@@ -96,7 +96,7 @@ const NAV_ELEMENTS_BOTTOM = [
   },
   {
     id: 13,
-    name: "Steam",
+    name: "",
   },
   {
     id: 14,
