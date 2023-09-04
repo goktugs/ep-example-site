@@ -29,9 +29,9 @@ export default function Input() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex h-full max-h-16 divide-x divide-slate-600 rounded-full bg-main-purple-dark px-5 py-5 shadow-main-input  ">
+    <div className="shadow-main-text-smoke-dark flex h-full max-h-16 divide-x divide-slate-600 rounded-full bg-main-purple-dark px-5 py-5 shadow-main-input  ">
       <div className="flex items-center justify-center font-bold text-white">
-        <div className="h-5 w-5">
+        <div className="h-4 w-5">
           <CategoryIcon />
         </div>
         <div className="w-36 max-w-full whitespace-nowrap px-5  ">
