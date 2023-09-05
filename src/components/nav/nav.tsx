@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { CategoryIcon } from "../../assets/nav/category-icon";
 import { useTranslation } from "react-i18next";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
 const NAV_ELEMENTS_TOP = [
   {
     id: 1,
@@ -124,16 +126,25 @@ export default function Nav() {
       ? "bg-main-purple-dark text-white "
       : "text-main-text-smoke";
 
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    mode: "free",
+    slides: {
+      perView: 10,
+      spacing: 15,
+    },
+  });
+
   return (
-    <div className="mb-5">
-      <ul className="my-4 flex justify-center space-x-8 overflow-x-scroll py-2 text-main-text-smoke ">
+    <div className=" mb-5">
+      <div className="my-4 flex justify-center space-x-8  overflow-x-auto py-2 text-main-text-smoke ">
         {NAV_ELEMENTS_TOP.map((element) => (
-          <li
+          <div
             key={element.id}
             onClick={() => handleClick(element.id)}
-            className={`flex flex-1 cursor-pointer whitespace-nowrap rounded-full p-4 text-center text-sm font-semibold ${getSelectedClass(
-              element.id,
-            )}`}
+            className={`flex flex-1 cursor-pointer items-center justify-center whitespace-nowrap rounded-full py-3  text-center text-sm font-semibold ${
+              element.id === 1 ? "pl-4 pr-9" : "px-2"
+            } ${getSelectedClass(element.id)}`}
           >
             {element.logo && (
               <div className="mr-2 flex h-6 w-6 items-center justify-center">
@@ -141,18 +152,18 @@ export default function Nav() {
               </div>
             )}
             {t(element.name)}
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
 
-      <div className="flex space-x-12 overflow-x-scroll pb-2 ">
+      <div ref={sliderRef} className="keen-slider relative -left-44 pb-2">
         {NAV_ELEMENTS_BOTTOM.map((element) => (
           <div
             key={element.id}
-            className="relative flex flex-col items-center space-y-1 text-white "
+            className="keen-slider__slide relative flex flex-col items-center space-y-1 text-white"
           >
             <a
-              className="block transform rounded-full bg-main-text-smoke p-1 transition hover:-rotate-12"
+              className="inline-flex transform flex-col rounded-full bg-main-text-smoke p-1 transition hover:-rotate-12"
               href="#"
             >
               <img
